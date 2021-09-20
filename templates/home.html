@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway HomePage</title>
+    <style>
+        
+        body {
+            background-image: linear-gradient(to right, #0575bd , #35b7f2);
+        }
+        p {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            margin:auto;
+            background: #0575bd;
+            text-align: center;
+            font-size: 18px;
+            padding: 10px 0px;
+            color: white;
+            font-family: sans-serif;
+        }
+        .mess h1 { 
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            background: #35b7f2;
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .center {
+            position: absolute;
+            top: 10%;
+            margin-left: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    {% for home in home_message %}
+    <div class="mess"><h1>{{ home.title }}</h1></div>
+
+    <!-- https://source.unsplash.com/1905x700/?train -->
+    <div class="center">
+            <img class="mySlides" src="https://source.unsplash.com/1905x700/?train">
+    </div>
+
+
+
+
+    <p>{{ home.tagline }}</p>
+    {% endfor %}
+
+
+
+
+    
+</body>
+</html>
